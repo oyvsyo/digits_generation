@@ -40,7 +40,7 @@ for i in range(10):
     vectors[i] = [0]*10
 for f in range(10):
     for j in range(10):
-        vectors[f][j] = np.array([f/10, j/10])
+        vectors[f][j] = np.array([f/20, j/20])
         images[f][j] = get_image([vectors[f][j].reshape(-1,2)])[0].reshape(28, 28)
 
 
@@ -50,12 +50,12 @@ for f in range(10):
 nrow = 10
 ncol = 10
 
-fig = plt.figure(figsize=(ncol+1, nrow+1)) 
+fig = plt.figure(figsize=(ncol+1, nrow+1))
 
 gs = gridspec.GridSpec(nrow, ncol,
-         wspace=0.0, hspace=0.0, 
-         top=1.-0.5/(nrow+1), bottom=0.5/(nrow+1), 
-         left=0.5/(ncol+1), right=1-0.5/(ncol+1)) 
+         wspace=0.0, hspace=0.0,
+         top=1.-0.5/(nrow+1), bottom=0.5/(nrow+1),
+         left=0.5/(ncol+1), right=1-0.5/(ncol+1))
 
 for i in range(nrow):
     for j in range(ncol):
@@ -67,4 +67,3 @@ for i in range(nrow):
 #         ax.set_yticklabels([])
 
 plt.show()
-
